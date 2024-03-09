@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbowypbkasasq"]
+
+[ext_resource type="Script" path="res://Scripts/CalculusI/Calculus_I.gd" id="1_5bqor"]
+[ext_resource type="FontFile" uid="uid://dbqtbq68vtxhr" path="res://font_80.tres" id="2_owbhp"]
+[ext_resource type="Texture2D" uid="uid://clykm3vw6y7vn" path="res://back-arrow.png" id="3_krnf1"]
+[ext_resource type="FontFile" uid="uid://0prfpmls0yv8" path="res://font_50.tres" id="4_11rpe"]
+
+[sub_resource type="Theme" id="Theme_55m0o"]
+default_font = ExtResource("2_owbhp")
+default_font_size = 80
+
+[node name="Calculus_I" type="Node2D"]
+script = ExtResource("1_5bqor")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Page" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Page"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="Page/PanelContainer"]
+modulate = Color(0.239216, 0.239216, 0.239216, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_55m0o")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_owbhp")
+theme_override_font_sizes/font_size = 80
+text = "Calculus I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="Page/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+icon = ExtResource("3_krnf1")
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Page"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 50
+
+[node name="ButtonContainer" type="GridContainer" parent="Page/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Test1Button" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_11rpe")
+theme_override_font_sizes/font_size = 50
+text = "Test 1"
+icon_alignment = 1
+
+[node name="Test2Button" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_11rpe")
+theme_override_font_sizes/font_size = 50
+text = "Test 2"
+icon_alignment = 1
+
+[node name="Test3Button" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_11rpe")
+theme_override_font_sizes/font_size = 50
+text = "Test 3"
+icon_alignment = 1
+
+[node name="Test4Button" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_11rpe")
+theme_override_font_sizes/font_size = 50
+text = "Final"
+icon_alignment = 1
+
+[connection signal="pressed" from="Page/PanelContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Page/MarginContainer/ButtonContainer/Test1Button" to="." method="_on_test_1_button_pressed"]

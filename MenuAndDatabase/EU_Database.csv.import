@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cmgmwkxephblq"
+
+[deps]
+
+files=["res://EU_Database.setId.translation", "res://EU_Database.Title.translation", "res://EU_Database.Sides.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation"]
+
+source_file="res://EU_Database.csv"
+dest_files=["res://EU_Database.setId.translation", "res://EU_Database.Title.translation", "res://EU_Database.Sides.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation", "res://EU_Database.Side.translation"]
+
+[params]
+
+compress=true
+delimiter=0

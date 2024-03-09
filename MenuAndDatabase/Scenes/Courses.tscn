@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0xskn15sd7m"]
+
+[ext_resource type="Script" path="res://Scripts/Courses.gd" id="1_1tl41"]
+[ext_resource type="FontFile" uid="uid://dbqtbq68vtxhr" path="res://font_80.tres" id="2_a5h7u"]
+[ext_resource type="FontFile" uid="uid://0prfpmls0yv8" path="res://font_50.tres" id="3_assfq"]
+
+[sub_resource type="Theme" id="Theme_55m0o"]
+default_font = ExtResource("2_a5h7u")
+default_font_size = 80
+
+[node name="Courses" type="Node2D"]
+script = ExtResource("1_1tl41")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Page" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleBar" type="PanelContainer" parent="Page"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Page/TitleBar"]
+modulate = Color(0.239216, 0.239216, 0.239216, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_55m0o")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_a5h7u")
+theme_override_font_sizes/font_size = 80
+text = "Courses"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Page"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 50
+
+[node name="ButtonContainer" type="GridContainer" parent="Page/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="CalculusIButton" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_assfq")
+theme_override_font_sizes/font_size = 50
+text = "Calculus I"
+icon_alignment = 1
+
+[node name="CalculusIIButton" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_assfq")
+theme_override_font_sizes/font_size = 50
+text = "Calculus II"
+icon_alignment = 1
+
+[node name="CalculusIIIButton" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_assfq")
+theme_override_font_sizes/font_size = 50
+text = "Calculus III"
+icon_alignment = 1
+
+[node name="DifferentialEquationsButton" type="Button" parent="Page/MarginContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_assfq")
+theme_override_font_sizes/font_size = 50
+text = "Differential Equations"
+icon_alignment = 1
+
+[connection signal="pressed" from="Page/MarginContainer/ButtonContainer/CalculusIButton" to="." method="_on_calculus_i_button_pressed"]
+[connection signal="pressed" from="Page/MarginContainer/ButtonContainer/CalculusIIButton" to="." method="_on_calculus_ii_button_pressed"]
+[connection signal="pressed" from="Page/MarginContainer/ButtonContainer/CalculusIIIButton" to="." method="_on_calculus_iii_button_pressed"]
+[connection signal="pressed" from="Page/MarginContainer/ButtonContainer/DifferentialEquationsButton" to="." method="_on_differential_equations_button_pressed"]

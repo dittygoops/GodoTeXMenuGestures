@@ -1,0 +1,215 @@
+Id,setId,Title,Sides,Side_1,Side_2,Side_3,Side_4,Side_5,Side_6,Side_7
+1,0,"\text{Domain of } f(x,y,z)",5,\text{ Standard restrictions on domain },"\text{ 1) Dividing by zero }
+\text{ 2) Even roots of negative numbers }
+\text{ 3) Logs of arguments less than or equal to zero }","f(x,y) = \frac{1}{x^2-y}
+
+\text{ Domain: All reals except where } y = x^2"," f(x,y) =\sqrt{4x-y^2} 
+
+\text{ Domain: All Reals where }  4x \ge y^2 ","f(x,y) = ln(x^4-3y) 
+
+\text{ Domain: All Reals where }  x^4 > 3y ",,
+2,0,"\text{ Range of } f(x,y)",3,\text{ The range is all the possible functional values },"\text{ Ex: Determine the range of } f(x,y) = \sqrt{x^2-sin(y)}
+
+\text{ Range: } [0,\infty) ","\text{ Ex: Determine the range of } f(x,y)=\frac{1}{2x-y}
+
+\text{ Range: } (-\infty,0)U(0,\infty)",,,,
+3,0,"\text{ Plotting } f(x,y)",2,\text{ Three techniques of plotting multi-variable functions },"\text{ 1) Apriori Knowledge of forms such as quadratic surfaces (analogous to knowing base functions such as } y=x, y=x^2 y = \sqrt{x})
+\text{ 2) Plotting individual points and connecting the dots (which is what MATLAB does) }
+\text{ 3) Cross Sectional slicing and level curves (slices / levels of the function) }",,,,,
+4,0,\text{ Level Curves },4,\text{ How do you determine level curves? },\text{ Set the function equal to a constant and plot the relationship of x and y for various values of that constant. },"Determine a few level curves of <math>f(x,y)=ye^x</math>
+",,,,
+5,0,\text{ Level Curves },2,"\text{ The level curves of } f(x,y) = 2x^2 + 2y^2 \text{ are }",\text{ Circles on planes paralell to the x-y plane. },"\text{ Let } k = ye^x \Rightarrow y = ke^{-x}
+
+k=0: y = 0
+
+k = 1 :  y = e^{-x} 
+
+k = 2 :  y = 2e^{-x} ",,,,
+6,0,\text{ Partial Derivatives },4,\text{ Key to evaluating partial derivatives? },"\text{ Treat all other ""Independent"" variables as constants.  It may help to mentally (or physically) replace the other variables with another symbol, perhaps a prime number. }",\text{ Ex: } 2x^2y+3sin(z)-cos(xz) = 2 ,"\text{ Ex: } \frac{\partial }{\partial x}\left( e^{x^2y-2x}\right) =e^{x^2y-2x} \frac{\partial }{\partial x}\left( x^2y - 2x\right) = e^{x^2y-2x} \left( 2xy - 2\right)
+",,,
+7,0,\text{ Partial Derivatives },2,\text{ Clairot's Theorem },"\text{ If } f_{xy} \text{ and } f_{yx} \text{ exist and are continuous then }
+
+f_{xy} = f_{yx} ",,,,,
+8,0,\text{ Partial Derivatives },2,\text{ Best tool to aid in application? },"\text{ Rewrite your expressions with functional arguments. }
+\text{ i.e. x and y stay the same, but write } z = z(x,y) \text{ every time it appears. }
+\text{ This can help you avoid viewing it as an independent variable. }","2x^2y+3sin(z)-cos(xz) = 2 
+
+2x^2y+3sin(z(x,y))-cos(x z(x,y)) = 2 
+
+\text{ Therefore applying } \frac{\partial}{\partial x} ,  4xy+3cos(z)(Z_x) + sin(xz) ( z + xZ_x) = 0 ",,,,
+9,0,\text{ Partial Derivatives },2,"\text{ Second Partial Derivatives of }
+
+f(x,y)=e^x\sin(y)+x-y","\text{ f_x = e^x \sin(y) + 1 }
+\text{ f_{xx} = e^x \sin(y) }
+ \text{ f_y = e^x \cos(y) - 1 }
+ \text{ f_{yy} = - e^x \sin(y) }
+ \text{ f_{xy} = e^x \cos(y) }
+ \text{ f_{yx} = e^x \cos(y) }",,,,,
+10,0,\text{ Tangent Planes },2,"\text{ Standard Formula for a tangent plane of } Z = f(x,y)","z = z_0 + \left(\left. \frac{ \partial f(x,y)}{\partial x} \right|_{x_0,y_0}\right)",,,,,
+11,0,\text{ Tangent Planes },7,"\text{ Determine the tangent plane to } f(x,y) = x^2+y^2 \text{ at the point } (x,y) = (1,1)",,"\text{ Given } f(x,y) = x^2 + y^2 
+
+f_x(x,y) = 2x \text{ which implies that } f_x(1,1) = 2","\text{ Given } f(x,y) = x^2 + y^2 
+
+f_x(x,y) = 2x \text{ which implies that } f_x(1,1) = 2
+
+f_y(x,y) = 2y \text{ which implies that } f_y(1,1) = 2 ","\text{ Given } f(x,y) = x^2 + y^2 
+
+f_x(x,y) = 2x \text{ which implies that } f_x(1,1) = 2
+
+f_y(x,y) = 2y \text{ which implies that } f_y(1,1) = 2 
+
+z_0 = f(x_0,y_0) = f(1,1) = 2 ","\text{ Given } f(x,y) = x^2 + y^2 
+
+f_x(x,y) = 2x \text{ which implies that } f_x(1,1) = 2  f_y(x,y) = 2y 
+
+\text{ which implies that } f_y(1,1) = 2 
+
+ z_0 = f(x_0,y_0) = f(1,1) = 2 
+
+  z - 2 = 2(x-1) + 2(y-1) ","\text{ Given } f(x,y) = x^2 + y^2
+
+f_x(x,y) = 2x \text{ which implies that }  f_x(1,1) = 2
+
+ f_y(x,y) = 2y  \text{ which implies that }  f_y(1,1) = 2
+
+ z_0 = f(x_0,y_0) = f(1,1) = 2 
+
+ z - 2 = 2(x-1) + 2(y-1) 
+
+\text{ Reformulate it if you desire, } z -2x -2y + 2 = 0 "
+12,0,\text{ Differentials },2,"\text{ The differential of } f(x,y,z,t) \text{ is }",df = \left(\frac{\partial f}{\partial x}\right)dx + left(\frac{\partial f}{\partial y}\right)dy + left(\frac{\partial f}{\partial z}\right)dz + left(\frac{\partial f}{\partial t}\right)dt,,,,,
+13,0,\text{ Differentials },2,"\text{ Determine the differential of } z(x,y) = e^y\sin(xy) ", dz = \left(ye^y\cos(xy) \right)dx + \left( e^y(\sin(xy) + x\cos(xy)) \right)dy ,,,,,
+14,0,\text{ Linearizations },2,\text{ Linearization is simply },\text{ Finding the equation of a tangent plane at a given point },,,,,
+15,0,\text{ Linearizations },5,"\text{ Obtain the linearization of } z = x^2 \sin(x,y) \text{ at the point} (x,y) = (1,\pi)","\text{ Given } z = x^2\sin(x,y)
+
+ L(x,y) = z_0 +\left . \left(2x\sin(xy) + x^2y\cos(xy)\right)\right|_{(1,\pi)}(x-1) + \left . \left( x^3\cos(xy)\right)\right|_{(1,\pi)}(y-\pi) ","\text{ Given } z = x^2\sin(x,y) 
+
+L(x,y) =  \left(-\pi\right)(x-1) +  \left( -1\right)(y-\pi) 
+
+L(x,y) = z_0 +\left . \left(2x\sin(xy) + x^2y\cos(xy)\right)\right|_{(1,\pi)}(x-1) + \left . \left( x^3\cos(xy)\right)\right|_{(1,\pi)}(y-\pi) ","\text{ Given } z = x^2\sin(x,y) 
+
+L(x,y)=-\pi x - y + 2 \pi 
+
+L(x,y) =  \left(-\pi\right)(x-1) +  \left( -1\right)(y-\pi) 
+
+L(x,y) = z_0 +\left . \left(2x\sin(xy) + x^2y\cos(xy)\right)\right|_{(1,\pi)}(x-1) + \left . \left( x^3\cos(xy)\right)\right|_{(1,\pi)}(y-\pi)",,,
+16,0,\text{The Chain Rule},2,"\text{ Given } Z = Z(x(t),y(t)) \text{ the chain rule allows us to evaluate } \frac{dZ}{dt} \text{ as }",\frac{dZ}{dt} = \left(\frac{\partial Z}{\partial x\right)\left(\frac{d x}{dt\right) + \left(\frac{\partial Z}{\partial y\right)\left(\frac{d Z}{dy\right),,,,,
+17,0,\text{The Chain Rule : Example },2,\test{ Given } Z = e^{xy} - x\sin(y) \text{ where } x = 3t^2-t \text{ and } y = e^{3t^2} \text{ determine } \frac{dZ}{dt},\frac{dZ}{dt} = \left( ye^{xy} - \sin(y)\right)\left(6t-1\right) + \left(xe^{xy} - x\cos(y)\right)\left(6te^{3t^2}\right),,,,,
+18,0,\text{The Partial Chain Rule},2,"\text{ Given } Z = Z(x(s,t),y(s,t)) \text{ the chain rule allows us to evaluate } \frac{\partial Z}{\partial s} \text{ as }",\frac{\partial Z}{\partial s} = \left(\frac{\partial Z}{\partial x\right)\left(\frac{\partial x}{\partial s\right) + \left(\frac{\partial Z}{\partial y\right)\left(\frac{\partial Z}{\partial s\right),,,,,
+19,0,\text{The Partial Chain Rule : Example },2,"\text{ Example: Determine } \frac{\partial z}{\partial t} \text{ , where } z = e^{x^2y} \text{ , } x = 2s+3t \text{ , } y = 4s-7t",\frac{\partial z}{\partial t} = \left( 2xye^{x^2y}\right) (3) + \left( x^2e^{x^2y}\right) (-7),,,,,
+20,0,\text{The Chain Rule : Implicit Differentiation },2,"\text{ Given } F(x,y,Z(x,y)) = 0 \text{ we can evaluate } \frac{\partial Z }{\partial x} \text{ and } \frac{\partial Z}{\partial y} \text{ as }",\frac{\partial Z }{\partial x } = - \frac{ \frac{\partial F}{\partial x}}{ \frac{\partial F}{\partial Z} } \text{ and } \frac{\partial Z }{\partial y } = - \frac{ \frac{\partial F}{\partial y}}{ \frac{\partial F}{\partial Z} },,,,,
+21,0,\text{The Chain Rule : Implicit Differentiation : Example,2,\text{ Given } x\sin(yz) + e^{x^2y^3z^4} - xyz = 0 \text{Evaluate } \frac{\partial Z }{\partial x} \text{ and } \frac{\partial Z}{\partial y},\frac{\partial Z }{\partial x } = - \frac{ \sin(yz)+2xy^3z^4e^{x^2y^3z^4}-yz  }{ xy\cos(yz)+4x^2y^3z^3e^{x^2y^3z^4}-xy } \text{ and } \frac{\partial Z }{\partial y } = - \frac{ xz\cos(yz)+3x^2y^2z^4e^{x^2y^3z^4}-xz }{ xy\cos(yz)+4x^2y^3z^3e^{x^2y^3z^4}-xy },,,,,
+22,0,\text{ The Gradient (In Cartesian) },2,"\text{ Given } f(x,y,z) \text{, the gradient of this function is }
+
+\vec{\nabla}f(x,y,z) = \left< \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right>
+
+Fundamental properties of the Gradient are?","\text{ 1. The gradient points in the direction of the max rate of change }
+\text{ 2. Due to (1), the Gradient is perpendicular to level curves and level surfaces and level volumes!
+\text{ 3.  The gradients magnitude is the max rate of change at the point of interest }
+\text{ 4.  The gradients unit vector provides us the direction of the max rate of change. }",,,,,
+23,0,\text{ Gradient : Example },2,"\text{ Determine the gradient of } f(x,y,z) = 2xy^2 z^4 + \tan(xy) + 3e^{yz}","\vec{\nabla} f(x,y,z) = \left<    2y^2 z^4 + y\sec^2(xy)  ,  4xy z^4 + x\sec^2(xy) + 3ze^{yz} ,  8xy^2 z^3 + 3ye^{yz} \right>",,,,,
+24,0,\text{ Directional Derivative },2,"\text{ The directional derivative of } f(x,y,z) \text{ at the point } (x_0,y_0,z_0) \text { in the direction of } \vec{u} \text{ is symbolized by } D_{\vec{u}} f(x_0,y_0,z_0) \text{ and in application it is }","D_{\vec{u}} f(x_0,y_0,z_0) = \vec{\nabla}} f(x_0,y_0,z_0) \cdot \left(\frac{\vec{u}}{||\vec{u}||}\right)",,,,,
+25,0,\text{ Directional Derivative : Example },2,"\text{ Find the directional derivative of the function at the point, P,  in the direction of the vector } \vec{u} 
+
+f(x,y) = \sin(2x+3y) ,  P(-6,4),\vec{u} = <\sqrt{3},-1> ","D_{\vec{u}} f(-6,4) = \vec{\del}}f(-6,4) \cdot \frac{<\sqrt{3},-1>}{2} = \left<2\cos(2(-6)+3(4)), 3\cos(2(-6)+3(4)\right> \cdot <\sqrt{3}/2,-1/2> = \sqrt{3}-3/2",,,,,
+26,0,\text{ Local Min / Max / Saddle },2,\text{ Local min / max and saddles occur when },"\vec{\nabla}f(x,y,z) = \vec{0} \text{ or undefined }",,,,,
+27,0,\text{ Local Min / Max / Saddle },2,\text{ To determine if the critical point is a min/max saddle we refer to what },"D = f_{xx}f_{yy} - [f_{xy}]^2
+
+\text{ if } D < 0 \text{ then the point is a saddle }
+
+\text{ if } D > 0 \text{ then it is a min/max }
+
+\text{ if } f_{xx},f_{yy} > 0 \text{ It is concave up and thus a local min }
+
+\text{ if } f_{xx}f_{yy} < 0 \text{ it is concave down and thus a local max }",,,,,
+28,0,\text{ Local Min / Max / Saddle : Example },6,"\text{ Determine the local max, min and saddle points of the function, }
+
+f(x,y) = x^2 + xy + y^2 + y ", f_x = 2x + y =0 \text{ and }  f_y = x + 2y + 1 = 0," f_x = 2x + y =0 \text{ and }  f_y = x + 2y + 1 = 0
+
+(x,y) = (1/3,-2/3)"," f_x = 2x + y =0 \text{ and }  f_y = x + 2y + 1 = 0
+
+(x,y) = (1/3,-2/3)
+
+f_{xx}=2 \text{and} f_{yy} = 2 \text{ and } f_{xy} = 1"," f_x = 2x + y =0 \text{ and }  f_y = x + 2y + 1 = 0
+
+(x,y) = (1/3,-2/3)
+
+f_{xx}=2 \text{and} f_{yy} = 2 \text{ and } f_{xy} = 1
+
+D = (2)(2) - (1)^2 = 4 > 0 \Rightarrow \text{ The point is a min max }"," f_x = 2x + y =0 \text{ and }  f_y = x + 2y + 1 = 0
+
+(x,y) = (1/3,-2/3)
+
+f_{xx}=2 \text{and} f_{yy} = 2 \text{ and } f_{xy} = 1
+
+D = (2)(2) - (1)^2 = 4 > 0 \Rightarrow \text{ The point is a min max }
+
+f_{xx}, f_{yy} > 0 \Rightarrow \text{ The surface is concave up and thus the point is a local min }",
+29,0,\text{ Absolute max },2,\text{ The general process to obtain absolute (global) max / min },"\text{ 1. Determine all local max/min that exist within boundary }
+
+\text{ 2. Evaluate the boundary for critical points on all function pieces
+
+\text{ 3. Evaluate the function at all interior local min/max, all critical points on function boundaries and all connection points on the boundary }
+
+\text{ 4.  The largest is the absolute max and the smallest is the absolute min }",,,,,
+30,0,\text{ Absolute Max : Example },2,"\text{ Determine the critical points on the boundary that would be candidates for the absolute max or min on the region }
+
+f(x,y) = xy^2 \text{ where the region is defined by } x^2 + y^2 \le 3 ","\text{ On the boundary, } y^2 = 3 - x^2
+
+\text{ Therefore } f(x,\pm\sqrt{3-x^2}) = x(3-x^2) = 3x - x^3
+
+f'(x) = 3 - 3x^2 =_{Set} 0 \Rightarrow x= \pm 1",,,,,
+31,0,\text{ Double Integrals },2,"\text{ Key to handling double integration (iterated integrals) """,\text{ Just like partial differentiation…  Treat all other independent variables as constants },,,,,
+31,0,\text{ Double Integrals Over Rectangular Regions },2,"\text{ If we are evaluating } \int_a^b{\int_c^d{ f(x,y) dx}dy} \text{ where }
+
+f(x,y) = g(x) h(y) \text{ then }","Because we have constant limits of integration and because the function is ""multiplicatively seperable""
+
+\int_a^b{\int_c^d{ f(x,y) dx}dy}  = \int_a^b h(y)dy \int_c^d g(x)dx",,,,,
+32,0,\text{ Double Integral Over Rectangular Region : Example,2,\text{ Evaluate } \int_0^1\int_2^3 x sin(xy) dydx,\int_0^1\int_2^3 x sin(xy) dydx = \int_0^1 \left. \left[ - \cos(xy)\right]\right|_{y=2}^{y=3} = \int_0^1 \left( -\cos(3x) + \cos(2x) \right) = \left.\left[ (-1/3)\sin(3x) + (1/2)\sin(2x)\right]\right|_0^1=(1/2)\sin(2) - (1/3)\sin(3),,,,,
+33,0,\text{ Double Integrals that ,2,\text{ Evaluate } \int_0^1\int_2^3 e^{x} \cos(y) dxdy,\text{ Evaluate } \int_0^1\int_2^3 e^{x} \cos(y) dxdy = \int_0^1 \cos(y)dy \int_2^3 e^xdx = \sin(y)|_0^1 e^x|_2^3 = \sin(1)\left(e^3 - e^2\right),,,,,
+34,0,\text{ Double Integrals with General Regions },,\text{ General Process for integrating with functional boundaries is },"\text{ 1. Draw the region of integration }
+
+\text{ 2. Pick the order of integration that minimizes your number of regions }
+
+\text{ 3. Based on the order, extract the appropriate functional boundaries }
+
+\text{ 4.  Plug into the iterated integral and integrate }",,,,,
+35,0,\text{ Double integrals with General Regions : Example },2,"\text{ Evaluate } \iint_R (2xy)dA \text{ where the region R is bounded by } y = \sqrt{x}, x = 1, y = 0","\text{ 1. The region is in the first quadrant bounded below by the x axis, to the right by x = 1 and above by } y = \sqrt{x}
+
+\text{ 2. There's no benefit to do one order over the other, we can do it both ways.
+
+\text{ 3. If y first, } 0 \le y \le \sqrt{x} \Rightarrow 0 \le x \le 1 \text{ and if did x first } y^2 \le x \le 1 \Rightarrow 0 \le y \le 1
+
+\text{ 3. \int_0^1\int_0^{\sqrt{x}} 2xy dydx = \int_0^1 xy^2|_{y=0}^{y=\sqrt{x}} = \int_0^1 x^2 = (1/3)x^3|_0^1 = 1/3 \text{ OR } \int_0^1\int_{y^2}^1 (2xy)dxdy = \int_0^1 x^2 y|_{x=y^2}^{x=1}dy=\int_0^1 y(1-y^4)dy = (1/2)y^2 - (1/6)y^2 |0^1 = 1/2 - 1/6 = 2/6 = 1/3",,,,,
+36,0,\text{ Double Integrals - Changing Order of Integration },2,\text{ General Process for changing the order of integration is },"\text{ 1. Use the existing limits to draw all four boundaries and identify the region of integration }
+
+\text{ 2. Identify the new functional bounds of integration with the reverse order }
+
+\text{ 3. Plug into the new integral and integrate }",,,,,
+37,0,\text{ Double Integrals - Changing Order of Integration : Example },2,"\text{ Evaluate the following whilst changing the order of integration }
+
+\int_0^1 \int_y^1 e^{x^2} dxdy","\text{ 1.  The region of integration is the triangular region in the first quadrant with vertices (0,0), (1,0), and (1,1) }
+
+\text{ 2. If we integrate with respect to y first, then our limits are } 0 \le y \le x \Rightarrow 0 \le x \le 1
+
+\text{ 3. } \int_0^1\int_0^x e^{x^2} dydx = \int_0^1 xe^{x^2} dx = (1/2) e^{x^2}|_0^1 = (1/2)(e-1)",,,,,
+38,0,\text{ Double Integrals in Polar Coordinates },2,\text{ General Guidelines for Polar Coordinate Integration },"\text{ 1. Draw the region of integration }
+
+\text{ 2. Based on the region, extract the appropiate limits of integration in polar }
+
+\text{ 3. Convert the integrand using : } x = r\cos(\theta) & y = r\sin(\theta) (x^2 + y^2 = r^2)
+
+\text{ 4. Differential Element } dA = rdrd\theta
+
+\text{ 5. Plug it all in and integrate }",,,,,
+39,0,\text{ Double Integrals in Polar : Example },2,"\text{ Evaluate the following integral via changing to polar coordinates }
+
+\int_0^{\sqrt{2}} \ints_y^{\sqrt{ 4 - y^2 }}  xydxdy","\text{ 1. The region of integration is an eighth of a circle of radius 2 measured out from the x axis and has an angle of measure of } \pi/4
+
+\text{ 2.  Limits of integration } 0 \le \theta \le \pi/4 \text{ and } 0 \le r \le 2
+
+\text{ 3. Integrand : }xy = (r\cos(\theta))(r\sin(\theta)) = r^2 \sin(\theta)\cos(\theta)
+
+\text{ 4. Differential Element } dxdy = dA = rdrd\theta
+
+\text{ 5. Integrate } \int_0^2 \int_0^{\pi/4} r^3 \sin(\theta)\cos(\theta) d\theta dr = \int_0^2 r^3 dr \int_0^{\pi/4} \sin(\theta) \cos(\theta)d\theta = (1/4)r^4|_0^2 (1/2)\sin^2(\theta)|_0^{\pi/4} = (4)((1/2)(\sqrt{2}/2 = \sqrt{2}",,,,,
